@@ -13,9 +13,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { HomeModule } from './home/home.module';
 import { DetailModule } from './detail/detail.module';
-
+import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
-
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -30,6 +29,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     CoreModule,
     SharedModule,
     HomeModule,
+    LoginModule,
     DetailModule,
     AppRoutingModule,
     TranslateModule.forRoot({

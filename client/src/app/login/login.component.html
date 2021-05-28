@@ -1,0 +1,13 @@
+
+<form #loginForm="ngForm" (ngSubmit)="login()" ngNativeValidate>
+    <label for="email">Email</label>
+    <input [(ngModel)]="formValue.email" name="email" type="email" placeholder="yay" required>
+    <br>
+    <label for="password">Password</label>
+    <input [(ngModel)]="formValue.password" name="password" type="password" required>
+    <br>
+    <label for="forceCreate">ForceCreate</label>
+    <input [(ngModel)]="formValue.forceCreate" type="checkbox" name="forceCreate" >
+    <br>
+    <input type="submit" value="authenticateEmailPassword">
+</form>
